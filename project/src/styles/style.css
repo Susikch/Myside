@@ -175,3 +175,29 @@
     transform: scale(1.2);
 }
 
+.catalog{
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../../assets/images/pc.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.catalog-text{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    h1{
+        font-size: 68px;
+
+    }
+
+    p{
+        font-size: 18px;
+        width: 400px;
+    }
+}
