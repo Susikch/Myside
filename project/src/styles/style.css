@@ -18,17 +18,16 @@
     align-items: center;
     padding: 16px 4px;
 
-
     font-size: 24px;
-    div{
-    p{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-    }
+    div {
+        p {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+        }
     }
 }
 
@@ -43,7 +42,7 @@
     border-radius: 10px;
 }
 
-.navigation{
+.navigation {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -60,7 +59,7 @@
     }
 }
 
-.welcome{
+.welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,17 +71,16 @@
 
     border-radius: 10px;
 
-    h1{
+    h1 {
         text-align: center;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 100px;
     }
 
-    p{
+    p {
         font-size: 36px;
         text-align: center;
     }
-
 }
 
 .icons {
@@ -98,20 +96,20 @@
     height: 55px;
 }
 
-.social-container{
+.social-container {
     padding: 20px;
     position: relative;
     display: inline-block;
 }
 
-.social-toggle{
+.social-toggle {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0px;
 }
 
-.main-icon{
+.main-icon {
     width: 40px;
     height: 40px;
     background-color: #000;
@@ -123,12 +121,12 @@
     transition: transform 0.3s;
 }
 
-.main-icon:hover{
+.main-icon:hover {
     transform: scale(1.1);
 }
 
 .main-icon:before {
-    content: "+";
+    content: '+';
     color: #fff;
     font-size: 24px;
     font-weight: bold;
@@ -136,11 +134,11 @@
 }
 
 .social-toggle:checked + .main-icon:before {
-    content: "x";
+    content: 'x';
     font-size: 24px;
 }
 
-.social-icons{
+.social-icons {
     position: absolute;
     bottom: 60px;
     left: 40px;
@@ -158,13 +156,13 @@
     transition: all 0.3s ease-out;
 }
 
-.social-toggle:checked - .social-icons {
+.social-toggle:checked ~ .social-icons {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%) translate(0);
 }
 
-.social-icon{
+.social-icon {
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -175,29 +173,51 @@
     transform: scale(1.2);
 }
 
-.catalog{
-    padding: 40px 60px;
+.catalog {
+    padding: 0px 60px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-image: url('../../assets/images/pc.jpg');
+    justify-content: space-around;
+    background-image: url('../../assets/images/cloudy.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
 
-.catalog-text{
+.catalog-text {
     display: flex;
     align-items: center;
-    gap: 16px;
 
-    h1{
+    h1 {
         font-size: 68px;
-
+        padding: 20px;
     }
 
-    p{
+    p {
         font-size: 18px;
         width: 400px;
     }
+}
+
+.your-class {
+    justify-content: center;
+    figure {
+        display: flex;
+        align-items: center;
+        margin: 20px 40px;
+
+        img {
+            width: 260px;
+            height: 400px;
+            object-fit: cover;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        figcaption {
+            font-size: 24px;
+            color: #fff;
+            padding: 0px 45px;
+        }
+    }
+    
 }
