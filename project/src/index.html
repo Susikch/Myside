@@ -53,7 +53,7 @@
                     отпуск!
                 </p>
             </div>
-            F
+            
             <div class="social-container">
                 <input
                     type="checkbox"
@@ -161,6 +161,85 @@
             </div>
             <div></div>
         </section>
+        
+        <section class="gallery">
+            <div class="gallery-container" role="region" aria-label="Image gallery with tabs">
+                <nav class="tabs" role="tablist">
+                    <h1 style="color: rgba(0, 128, 0, 0.61); align-items: center; display: flex;">ГАЛЕРЕЯ</h1>
+                    <div>
+                    <button role="tab" aria-selected="true" aria-controls="tab1" id="tab1-btn" class="tab active" tabindex="0">Рускеала</button>
+                    <button role="tab" aria-selected="false" aria-controls="tab2" id="tab2-btn" class="tab" tabindex="-1">Кижи</button>
+                    <button role="tab" aria-selected="false" aria-controls="tab3" id="tab3-btn" class="tab" tabindex="-1">Кивач</button>
+                    
+                </nav>
+                <section id="tab1" role="tabpanel" aria-labelledby="tab1-btn" class="gallery-content active" tabindex="0">
+                    <img src="../assets/images/1.jpg" alt="Nature Image 1" />
+                    <img src="../assets/images/2.jpg" alt="Nature Image 2" />
+                    <img src="../assets/images/3.jpg" alt="Nature Image 3" />
+                    <img src="../assets/images/4.jpg" alt="Nature Image 4" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 5" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 6" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 7" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 8" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 9" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 10" />
+
+                </section>
+                <section id="tab2" role="tabpanel" aria-labelledby="tab2-btn" class="gallery-content" tabindex="0">
+                    <img src="../assets/images/1.jpg" alt="Nature Image 1" />
+                    <img src="../assets/images/2.jpg" alt="Nature Image 2" />
+                    <img src="../assets/images/3.jpg" alt="Nature Image 3" />
+                    <img src="../assets/images/4.jpg" alt="Nature Image 4" />
+                    <img src="../assets/images/5.jpg" alt="Nature Image 5" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 6" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 7" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 8" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 9" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 10" />
+                </section>
+                <section id="tab3" role="tabpanel" aria-labelledby="tab3-btn" class="gallery-content" tabindex="0">
+                    <img src="../assets/images/1.jpg" alt="Nature Image 1" />
+                    <img src="../assets/images/2.jpg" alt="Nature Image 2" />
+                    <img src="../assets/images/3.jpg" alt="Nature Image 3" />
+                    <img src="../assets/images/4.jpg" alt="Nature Image 4" />
+                    <img src="../assets/images/6.jpg" alt="Nature Image 5" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 6" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 7" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 8" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 9" />
+                    <img src="../assets/images/1.jpg" alt="Nature Image 10" />
+                </section>
+            </div>
+        </section>  
+
+        <script>
+    // Tab switching functionality with ARIA support and keyboard navigation
+    (function() {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.gallery-content');
+      function activateTab(index) {
+        tabs.forEach((tab, i) => {
+          const selected = i === index;
+          tab.classList.toggle('active', selected);
+          tab.setAttribute('aria-selected', selected);
+          tab.setAttribute('tabindex', selected ? '0' : '-1');
+          contents[i].classList.toggle('active', selected);
+        });
+        tabs[index].focus();
+      }tabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => activateTab(i));
+        tab.addEventListener('keydown', e => {
+          if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            activateTab((i + 1) % tabs.length);
+          } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            activateTab((i - 1 + tabs.length) % tabs.length);
+          }
+        });
+      });
+        })();
+        </script>
         <script
             type="text/javascript"
             src="//code.jquery.com/jquery-1.11.0.min.js"
