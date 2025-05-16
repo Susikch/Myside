@@ -126,14 +126,14 @@
 
 
             <div class="content">
-                <div class="tekst" style="background-color: #fff; width: 530px; height: 490px; padding: 20px 0px;">
+                <div class="tekst" style="background-color: #fff; width: 530px; height: 490px;">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere modi ex soluta doloribus sit dolore qui nisi et mollitia nemo.</p>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, aperiam!</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam reiciendis dolore ab repellat reprehenderit hic.</p>
-                    <div style="display: flex; padding: 70px 10px; gap: 280px; align-items: center;">
+                    <div style="display: flex; padding: 0px 0px; gap: 280px; align-items: center; justify-content: space-between;">
                         <P style="color: green;">Karel tour</P>
-                        <img src="../assets/svg/forest-svgrepo-com.svg" alt="Изображение" style="height: 80px; width: 80px; align-items: end;">
+                        <img src="../assets/svg/forest-svgrepo-com.svg" alt="Изображение" style="height: 80px; width: 80px; align-items: flex-end;">
                     </div>
 
                 </div>
@@ -150,15 +150,23 @@
         </section>
         
         <section class="gallery">
+            <nav class="tabs" role="tablist">
+                    <h1 style="color: rgba(0, 128, 0, 0.61); align-items: center; display: flex;">ГАЛЕРЕЯ</h1>
+                    <div style="display: flex; gap: 20px;">
+                    <button role="tab" aria-selected="true" aria-controls="tab1" id="tab1-btn" class="tab active" tabindex="0">Рускеала</button>
+                    <button role="tab" aria-selected="false" aria-controls="tab2" id="tab2-btn" class="tab" tabindex="-1">Кижи</button>
+                    <button role="tab" aria-selected="false" aria-controls="tab3" id="tab3-btn" class="tab" tabindex="-1">Кивач</button>
+                    
+                </nav>
             <div class="gallery-container" role="region" aria-label="Image gallery with tabs">
-                <nav class="tabs" role="tablist">
+                <!-- <nav class="tabs" role="tablist">
                     <h1 style="color: rgba(0, 128, 0, 0.61); align-items: center; display: flex;">ГАЛЕРЕЯ</h1>
                     <div>
                     <button role="tab" aria-selected="true" aria-controls="tab1" id="tab1-btn" class="tab active" tabindex="0">Рускеала</button>
                     <button role="tab" aria-selected="false" aria-controls="tab2" id="tab2-btn" class="tab" tabindex="-1">Кижи</button>
                     <button role="tab" aria-selected="false" aria-controls="tab3" id="tab3-btn" class="tab" tabindex="-1">Кивач</button>
                     
-                </nav>
+                </nav> -->
                 <section id="tab1" role="tabpanel" aria-labelledby="tab1-btn" class="gallery-content active" tabindex="0">
                     <img src="../assets/images/1-1.jpg" alt="Nature Image 1" />
                     <img src="../assets/images/1-2.jfif" alt="Nature Image 2" />
@@ -197,6 +205,7 @@
                     <img src="../assets/images/3-10.jpg" alt="Nature Image 10" />
                 </section>
             </div>
+            <div></div>
         </section>  
         <section class="contact">
             <div style="padding: 40px 80px;">

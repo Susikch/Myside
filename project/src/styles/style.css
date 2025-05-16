@@ -174,10 +174,10 @@
 }
 
 .catalog {
-    padding: 0px 60px;
+    padding: 60px 140px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     background-image: url('../../assets/images/cloudy.jpg');
     background-position: center;
     background-size: cover;
@@ -226,7 +226,7 @@
     padding: 60px 140px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
     overflow: hidden;
     /* background-image: url('../../assets/images/cloudy.jpg'); */
@@ -261,9 +261,12 @@
     align-items: end;
 
     .tekst {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 20px;
         p {
             text-align: left;
-            padding: 20px;
             font-size: 20px;
         }
     }
@@ -276,7 +279,6 @@
 
 .gallery-container {
     align-items: center;
-    padding: 40px 100px;
     gap: 60px;
     max-width: 1700px;
 
@@ -289,12 +291,10 @@
     justify-content: space-between;
     align-items: center;
     color: green;
-    padding: 40px 0px;
     background-color: #fff;
     background: var(--tab-inactive-bg);
     border-bottom: 0px solid var(--primary-color);
     h1 {
-        padding: 0px 60px;
         font-size: 68px;
     }
 }
@@ -347,7 +347,7 @@
     border-radius: 3px;
 }
 .gallery{
-    padding: 10px 0px;;
+    padding: 60px 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -382,6 +382,7 @@
 .contact {
     display: flex;
     flex-direction: column;
+    padding: 60px 140px;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
